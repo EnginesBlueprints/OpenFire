@@ -22,7 +22,7 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-04-04T16:33:26+10:00"
+    "timestamp": "2018-04-04T17:08:55+10:00"
   },
   "software": {
     "base": {
@@ -46,7 +46,7 @@
     "scripts": {
       "start": {
         "language": "sh",
-        "content": "#!/bin/sh\r\nsleep 500"
+        "content": "#!/bin/sh\r\nPID_FILE=/home/engines/run/openfire.pid\r\n\r\ncd /home/app\r\n. /home/engines/functions/trap.sh\r\nbin/openfire start\r\necho $! >$PID_FILE\r\nstartup_complete\r\n\r\nwhile ! test -f /home/engines/run/file/sig_term \r\n do \r\n  sleep 10 &\r\n  wait \r\ndone  \r\n\r\nrm $PID_FILE\r\nshutdown_complete"
       }
     },
     "installed_packages": [
@@ -70,6 +70,22 @@
           "collation": "utf8_general_ci",
           "full_access": "false"
         }
+      }
+    ],
+    "file_write_permissions": [
+      {
+        "path": "app"
+      },
+      {
+        "path": "app/conf",
+        "recursive": true
+      },
+      {
+        "path": "app/logs",
+        "recursive": true
+      },
+      {
+        "path": "app/pluggins"
       }
     ]
   }
