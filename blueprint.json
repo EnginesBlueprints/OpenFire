@@ -22,7 +22,7 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-04-05T11:11:14+10:00"
+    "timestamp": "2018-04-05T11:40:04+10:00"
   },
   "software": {
     "base": {
@@ -46,7 +46,7 @@
     "scripts": {
       "start": {
         "language": "sh",
-        "content": "#!/bin/sh\r\nPID_FILE=/home/engines/run/openfire.pid\r\n\r\ncd /home/app\r\n. /home/engines/functions/trap.sh\r\nbin/openfire start\r\necho $! >$PID_FILE\r\nstartup_complete\r\n\r\nwhile ! test -f /home/engines/run/file/sig_term \r\n do \r\n  sleep 10 &\r\n  wait \r\ndone  \r\n\r\nrm $PID_FILE\r\nshutdown_complete"
+        "content": "#!/bin/sh\r\nPID_FILE=/home/engines/run/openfire.pid\r\n\r\nif ! test -f /home/engines/run/flags/dbssetup\r\n cat resources/database/openfire_mysql.sql  |mysql -h mysql -u $dbuser --password=$dbpasswd $dbname\r\n touch /home/engines/run/flags/dbssetup\r\nfi\r\ncd /home/app\r\n. /home/engines/functions/trap.sh\r\nbin/openfire start\r\necho $! >$PID_FILE\r\nstartup_complete\r\n\r\nwhile ! test -f /home/engines/run/flags/sig_term \r\n do \r\n  sleep 10 &\r\n  wait \r\ndone  \r\n\r\nrm $PID_FILE\r\nshutdown_complete"
       }
     },
     "installed_packages": [
@@ -85,7 +85,8 @@
         "recursive": true
       },
       {
-        "path": "pluggins"
+        "path": "plugins",
+        "recursive": true
       }
     ]
   }
