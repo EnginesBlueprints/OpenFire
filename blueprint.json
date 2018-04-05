@@ -22,12 +22,12 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-04-04T18:22:24+10:00"
+    "timestamp": "2018-04-05T11:11:14+10:00"
   },
   "software": {
     "base": {
       "name": "openfire",
-      "framework": "openjdk9",
+      "framework": "openjdk8",
       "deployment_type": "web",
       "http_protocol": "https_and_http",
       "framework_port_override": 9090,
