@@ -22,7 +22,7 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-04-05T11:58:16+10:00"
+    "timestamp": "2018-04-05T16:25:05+10:00"
   },
   "software": {
     "base": {
@@ -69,6 +69,27 @@
           "db_password": "_Engines_System(random(10))",
           "collation": "utf8_general_ci",
           "full_access": "false"
+        }
+      },
+      {
+        "publisher_namespace": "EnginesSystem",
+        "type_path": "ldap_access",
+        "variables": {
+          "access_dn": "uid=_Engines_Builder(engine_name),ou=hosts,ou=Engines,dc=engines,dc=internal",
+          "ldap_password": "_Engines_System(random(8))",
+          "service_name": "_Engines_Builder(engine_name)",
+          "type": "access"
+        }
+      },
+      {
+        "publisher_namespace": "EnginesSystem",
+        "type_path": "ldap",
+        "variables": {
+          "type": "group",
+          "cn": "_Engines_Builder(engine_name)",
+          "read_access": "all",
+          "write_access": "none",
+          "service_name": "_Engines_Field(cn)__Engine_Fields(type)"
         }
       }
     ],
