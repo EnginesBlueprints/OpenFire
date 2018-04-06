@@ -22,7 +22,7 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-04-06T14:49:57+10:00"
+    "timestamp": "2018-04-06T15:22:58+10:00"
   },
   "software": {
     "base": {
@@ -58,8 +58,8 @@
         "protocol": "tcp"
       },
       {
-        "port": "10000-10100",
-        "external": "10000-10100",
+        "port": "11000-11100",
+        "external": "11000-11100",
         "protocol": "tcp"
       },
       {
