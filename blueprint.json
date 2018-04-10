@@ -22,7 +22,7 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-04-10T12:59:17+10:00"
+    "timestamp": "2018-04-10T17:03:11+10:00"
   },
   "software": {
     "base": {
@@ -75,6 +75,11 @@
       {
         "port": "7443",
         "external": "7443",
+        "protocol": "tcp"
+      },
+      {
+        "port": "5223",
+        "external": "5223",
         "protocol": "tcp"
       }
     ],
