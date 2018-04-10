@@ -22,7 +22,7 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-04-06T15:22:58+10:00"
+    "timestamp": "2018-04-10T12:29:47+10:00"
   },
   "software": {
     "base": {
@@ -65,6 +65,16 @@
       {
         "port": "7777",
         "external": "7777",
+        "protocol": "tcp"
+      },
+      {
+        "port": "7070",
+        "external": "7070",
+        "protocol": "tcp"
+      },
+      {
+        "port": "7443",
+        "external": "7443",
         "protocol": "tcp"
       }
     ],
@@ -116,6 +126,13 @@
           "write_access": "none",
           "service_name": "ldap_group"
         }
+      }
+    ],
+    "replacement_strings": [
+      {
+        "string": "s/# INSTALL4J_ADD_VM_PARAMS=/INSTALL4J_ADD_VM_PARAMS=-Xms=128 -Xmx=500/",
+        "source_file": "bin/openfire",
+        "destination_file": "bin/openfire"
       }
     ],
     "file_write_permissions": [
