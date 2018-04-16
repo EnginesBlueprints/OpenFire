@@ -22,7 +22,7 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-04-10T17:03:11+10:00"
+    "timestamp": "2018-04-16T18:14:21+10:00"
   },
   "software": {
     "base": {
@@ -86,7 +86,7 @@
     "scripts": {
       "start": {
         "language": "sh",
-        "content": "#!/bin/sh\r\nPID_FILE=/home/engines/run/openfire.pid\r\n\r\nif ! test -f /home/engines/run/flags/dbssetup\r\n then\r\n  cat resources/database/openfire_mysql.sql  |mysql -h mysql -u $dbuser --password=$dbpasswd $dbname\r\n  touch /home/engines/run/flags/dbssetup\r\nfi\r\ncd /home/app\r\n. /home/engines/functions/trap.sh\r\nbin/openfire start\r\necho $! >$PID_FILE\r\nstartup_complete\r\n\r\nwhile ! test -f /home/engines/run/flags/sig_term \r\n do \r\n  sleep 10 &\r\n  wait \r\ndone  \r\n\r\nrm $PID_FILE\r\nshutdown_complete"
+        "content": "#!/bin/bash\r\nPID_FILE=/home/engines/run/openfire.pid\r\n\r\nif ! test -f /home/engines/run/flags/dbssetup\r\n then\r\n  cat resources/database/openfire_mysql.sql  |mysql -h mysql -u $dbuser --password=$dbpasswd $dbname\r\n  touch /home/engines/run/flags/dbssetup\r\nfi\r\ncd /home/app\r\n. /home/engines/functions/trap.sh\r\nulimit\r\nbin/openfire start\r\necho $! >$PID_FILE\r\nstartup_complete\r\n\r\nwhile ! test -f /home/engines/run/flags/sig_term \r\n do \r\n  sleep 10 &\r\n  ps -ax |grep java |grep -v grep \r\n  if test $? -ne 0\r\n   then\r\n    break\r\n  fi    \r\n  wait \r\ndone  \r\n\r\nrm $PID_FILE\r\nshutdown_complete"
       }
     },
     "installed_packages": [
@@ -135,7 +135,7 @@
     ],
     "replacement_strings": [
       {
-        "string": "s/# INSTALL4J_ADD_VM_PARAMS=/INSTALL4J_ADD_VM_PARAMS=\\\"-Xms=128 -Xmx=500\\\"/",
+        "string": "s/# INSTALL4J_ADD_VM_PARAMS=/INSTALL4J_ADD_VM_PARAMS=\\\"-Xms128 -Xmx320\\\"/",
         "source_file": "bin/openfire",
         "destination_file": "bin/openfire"
       }
