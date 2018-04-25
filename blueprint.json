@@ -22,7 +22,7 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-04-16T18:14:21+10:00"
+    "timestamp": "2018-04-26T07:52:38+10:00"
   },
   "software": {
     "base": {
@@ -135,7 +135,7 @@
     ],
     "replacement_strings": [
       {
-        "string": "s/# INSTALL4J_ADD_VM_PARAMS=/INSTALL4J_ADD_VM_PARAMS=\\\"-Xms128 -Xmx320\\\"/",
+        "string": "s/# INSTALL4J_ADD_VM_PARAMS=/INSTALL4J_ADD_VM_PARAMS=\\\"-Xms128m -Xmx320m\\\"/",
         "source_file": "bin/openfire",
         "destination_file": "bin/openfire"
       }
