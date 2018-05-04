@@ -22,7 +22,7 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-04-26T08:15:07+10:00"
+    "timestamp": "2018-05-04T13:35:33+10:00"
   },
   "software": {
     "base": {
@@ -40,27 +40,27 @@
       {
         "port": "5222",
         "external": "5222",
-        "protocol": "tcp"
+        "protocol": "tcp_and_udp"
       },
       {
         "port": "5269",
         "external": "5269",
-        "protocol": "tcp"
+        "protocol": "tcp_and_udp"
       },
       {
         "port": "5229",
         "external": "5229",
-        "protocol": "tcp"
+        "protocol": "tcp_and_udp"
       },
       {
         "port": "3478-3479",
         "external": "3478-3479",
-        "protocol": "tcp"
+        "protocol": "tcp_and_udp"
       },
       {
-        "port": "11000-11100",
-        "external": "11000-11100",
-        "protocol": "tcp"
+        "port": "10000-20000",
+        "external": "10000-20000",
+        "protocol": "tcp_and_udp"
       },
       {
         "port": "7777",
@@ -81,6 +81,26 @@
         "port": "5223",
         "external": "5223",
         "protocol": "tcp"
+      },
+      {
+        "port": "1935",
+        "external": "1935",
+        "protocol": "tcp"
+      },
+      {
+        "port": "5060",
+        "external": "5060",
+        "protocol": "tcp"
+      },
+      {
+        "port": "3478-3479",
+        "external": "3478-3479",
+        "protocol": "tcp"
+      },
+      {
+        "port": "5000-6000",
+        "external": "5000-6000",
+        "protocol": "tcp_and_udp"
       }
     ],
     "scripts": {
