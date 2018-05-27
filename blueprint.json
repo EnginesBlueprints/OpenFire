@@ -22,7 +22,7 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-05-04T13:35:33+10:00"
+    "timestamp": "2018-05-27T15:50:46+10:00"
   },
   "software": {
     "base": {
@@ -159,7 +159,7 @@
           "service_name": "config_store",
           "volume_src": "",
           "engine_path": "",
-          "permissions": "ro",
+          "permissions": "rw",
           "user": "_Engines_Builder(data_uid)",
           "group": "_Engines_Builder(data_gid)"
         }
