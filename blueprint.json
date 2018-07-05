@@ -22,7 +22,7 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-05-27T15:50:46+10:00"
+    "timestamp": "2018-07-06T09:12:54+10:00"
   },
   "software": {
     "base": {
@@ -40,27 +40,27 @@
       {
         "port": "5222",
         "external": "5222",
-        "protocol": "tcp_and_udp"
+        "protocol": "tcp"
       },
       {
         "port": "5269",
         "external": "5269",
-        "protocol": "tcp_and_udp"
+        "protocol": "tcp"
       },
       {
         "port": "5229",
         "external": "5229",
-        "protocol": "tcp_and_udp"
+        "protocol": "tcp"
       },
       {
         "port": "3478-3479",
         "external": "3478-3479",
-        "protocol": "tcp_and_udp"
+        "protocol": "tcp"
       },
       {
-        "port": "10000-20000",
-        "external": "10000-20000",
-        "protocol": "tcp_and_udp"
+        "port": "10000-12000",
+        "external": "10000-12000",
+        "protocol": "tcp"
       },
       {
         "port": "7777",
@@ -100,7 +100,7 @@
       {
         "port": "5000-6000",
         "external": "5000-6000",
-        "protocol": "tcp_and_udp"
+        "protocol": "udp"
       }
     ],
     "scripts": {
