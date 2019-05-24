@@ -22,12 +22,12 @@
         "url": "https://www.apache.org/licenses/LICENSE-2.0"
       }
     },
-    "timestamp": "2018-07-06T09:12:54+10:00"
+    "timestamp": "2019-05-24T16:10:30+10:00"
   },
   "software": {
     "base": {
       "name": "openfire",
-      "framework": "openjdk8",
+      "framework": "docker",
       "deployment_type": "web",
       "http_protocol": "https_and_http",
       "framework_port_override": 9090,
@@ -161,7 +161,8 @@
           "engine_path": "",
           "permissions": "rw",
           "user": "_Engines_Builder(data_uid)",
-          "group": "_Engines_Builder(data_gid)"
+          "group": "_Engines_Builder(data_gid)",
+          "fw_user": "_Engines_Builder(cont_user_id)"
         }
       }
     ],
